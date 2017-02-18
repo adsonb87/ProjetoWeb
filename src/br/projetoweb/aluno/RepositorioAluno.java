@@ -34,7 +34,7 @@ public class RepositorioAluno implements IRepostorioAluno{
 			
 			ps.close();
 			con.close();
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -58,7 +58,7 @@ public class RepositorioAluno implements IRepostorioAluno{
 			ps.close();
 			rs.close();
 			con.close();
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -84,7 +84,7 @@ public class RepositorioAluno implements IRepostorioAluno{
 			
 			ps.close();
 			con.close();
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -106,7 +106,7 @@ public class RepositorioAluno implements IRepostorioAluno{
 			con.close();
 			
 			return true;
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -142,7 +142,7 @@ public class RepositorioAluno implements IRepostorioAluno{
 			ps.close();
 			rs.close();
 			con.close();
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
