@@ -15,8 +15,8 @@
 	
 	<form action="alunocontroller.do" method="post">
 		
- 		<label>Id: </label> -->
- 		<input type="text" name="txtid" value="<%= aluno.getIdAluno() %>" size="50"/><br><br> -->
+ 		<label>Id: </label>
+ 		<input type="text" name="txtid" value="<%= aluno.getIdAluno() %>" size="50"/><br><br>
 		
 		<label>Nome: </label>
 		<input type="text" name="txtnome" value="<%= aluno.getNome() %>" size="50"/><br><br>

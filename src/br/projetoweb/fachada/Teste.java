@@ -8,7 +8,7 @@ public class Teste {
 		
 		Fachada f = Fachada.getInstance();
 		
-		Aluno aluno = new Aluno("André Nunes","000.111.222-22" ,25, "Design gráfico");
+		Aluno aluno = new Aluno("Adson Barbosa de Souza","111.222.333-44" ,29, "Sistemas da informação");
 		
 		
 		f.cadastrarAluno(aluno);

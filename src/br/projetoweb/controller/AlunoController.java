@@ -40,6 +40,8 @@ public class AlunoController extends HttpServlet {
 			Integer id = Integer.parseInt(request.getParameter("id"));
 			
 			fachada.removerUsuario(id);	
+			
+			response.sendRedirect("alunocontroller.do?acao=lis");
 		}
 		
 		if(acao != null && acao.equalsIgnoreCase("alt")){
@@ -66,6 +68,20 @@ public class AlunoController extends HttpServlet {
 		
 		}
 		
+		if(acao !=null && acao.equalsIgnoreCase("cad")){
+			Aluno aluno = new Aluno();
+			aluno.setCpf("");
+			aluno.setNome("");
+			aluno.setCurso("");
+			aluno.setIdade(0);
+			aluno.setIdAluno(0);
+			
+			request.setAttribute("aluno", aluno);
+			
+			RequestDispatcher saida = request.getRequestDispatcher("frmaluno.jsp");
+			saida.forward(request, response);
+		}
+		
 	}
 
 	
@@ -80,7 +96,7 @@ public class AlunoController extends HttpServlet {
 		String curso = request.getParameter("txtcurso");
 		
 		
-		if(id == null){
+		if(id == 0){
 			Aluno aluno = new Aluno(nome, cpf, idade, curso);
 			fachada.cadastrarAluno(aluno);		
 		}else{
